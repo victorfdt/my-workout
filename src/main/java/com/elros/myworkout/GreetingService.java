@@ -13,11 +13,5 @@ public class GreetingService {
 
     public String getGreetingTemplate(final String language) {
         return "Hello %s";
-        /*
-        switch (language) {
-            case "fr" : result = "Bonjour %s"; break;
-            case "de" : result = "Willkommen, %s"; break;
-        }
-         */
     }
 }
