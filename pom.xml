@@ -45,11 +45,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- Code -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Style -->
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>11.0.0</version>
+            <classifier>jakarta</classifier>
         </dependency>
     </dependencies>
 
