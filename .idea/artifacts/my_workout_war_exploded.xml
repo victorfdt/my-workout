@@ -15,6 +15,49 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: jakarta.mvc:jakarta.mvc-api:2.0.0" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/eclipse/jnosql/mapping/mapping-document/1.0.0-b3/mapping-document-1.0.0-b3.jar" output-file-name="org.eclipse.jnosql.mapping-mapping-document-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/eclipse/jnosql/communication/communication-document/1.0.0-b3/communication-document-1.0.0-b3.jar" output-file-name="org.eclipse.jnosql.communication-communication-document-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/eclipse/jnosql/communication/communication-core/1.0.0-b3/communication-core-1.0.0-b3.jar" output-file-name="org.eclipse.jnosql.communication-communication-core-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/jakarta/nosql/communication/communication-core/1.0.0-b3/communication-core-1.0.0-b3.jar" output-file-name="jakarta.nosql.communication-communication-core-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/eclipse/jnosql/communication/communication-query/1.0.0-b3/communication-query-1.0.0-b3.jar" output-file-name="org.eclipse.jnosql.communication-communication-query-1.0.0-b3.jar" />
+          <element id="library" level="project" name="Maven: org.antlr:antlr4-runtime:4.9.1" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/jakarta/nosql/communication/communication-query/1.0.0-b3/communication-query-1.0.0-b3.jar" output-file-name="jakarta.nosql.communication-communication-query-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/jakarta/nosql/communication/communication-document/1.0.0-b3/communication-document-1.0.0-b3.jar" output-file-name="jakarta.nosql.communication-communication-document-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/org/eclipse/jnosql/mapping/mapping-core/1.0.0-b3/mapping-core-1.0.0-b3.jar" output-file-name="org.eclipse.jnosql.mapping-mapping-core-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/jakarta/nosql/mapping/mapping-core/1.0.0-b3/mapping-core-1.0.0-b3.jar" output-file-name="jakarta.nosql.mapping-mapping-core-1.0.0-b3.jar" />
+          <element id="file-copy" path="$MAVEN_REPOSITORY$/jakarta/nosql/mapping/mapping-document/1.0.0-b3/mapping-document-1.0.0-b3.jar" output-file-name="jakarta.nosql.mapping-mapping-document-1.0.0-b3.jar" />
+          <element id="library" level="project" name="Maven: org.eclipse.jnosql.communication:mongodb-driver:1.0.0-b3" />
+          <element id="library" level="project" name="Maven: org.eclipse.jnosql.communication:communication-driver-commons:1.0.0-b3" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-sync:4.2.1" />
+          <element id="library" level="project" name="Maven: org.mongodb:bson:4.2.1" />
+          <element id="library" level="project" name="Maven: org.mongodb:mongodb-driver-core:4.2.1" />
+          <element id="library" level="project" name="Maven: org.jboss.weld.se:weld-se-core:3.1.8.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.weld.environment:weld-environment-common:3.1.8.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.weld:weld-core-impl:3.1.8.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.weld:weld-api:3.1.SP4" />
+          <element id="library" level="project" name="Maven: org.jboss.weld:weld-spi:3.1.SP4" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:2.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.el:jboss-el-api_3.0_spec:2.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec:2.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.weld.probe:weld-probe-core:3.1.8.Final" />
+          <element id="library" level="project" name="Maven: jakarta.enterprise:jakarta.enterprise.cdi-api:2.0.2" />
+          <element id="library" level="project" name="Maven: jakarta.inject:jakarta.inject-api:1.0" />
+          <element id="library" level="project" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.5.Final" />
+          <element id="library" level="project" name="Maven: org.eclipse:yasson:2.0.3" />
+          <element id="library" level="project" name="Maven: jakarta.json.bind:jakarta.json.bind-api:2.0.0" />
+          <element id="library" level="project" name="Maven: jakarta.json:jakarta.json-api:2.0.0" />
+          <element id="library" level="project" name="Maven: org.glassfish:jakarta.json:module:2.0.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config:2.8.1" />
+          <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config-core:2.8.1" />
+          <element id="library" level="project" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-annotation:1.8.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-expression:1.8.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-function:1.8.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-constraint:1.8.0" />
+          <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-classloader:1.8.0" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:9.2" />
+          <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config-common:2.8.1" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.2.Final" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:jakarta:11.0.0" />
         </element>
       </element>
