@@ -23,9 +23,8 @@
     <ui:composition template="/layout/common/commonLayout.xhtml">
         <ui:define name="title">Create Exercise</ui:define>
         <ui:define name="content">
-            <h:form>
-                <p:commandButton actionListener="#{exerciseBean.create()}" value="Create"/>
-            </h:form>
+            <h1>hi</h1>
+            <p:commandButton action="exercise/createExercise.xhtml.xhtml?faces-redirect=true" value="Create"/>
         </ui:define>
     </ui:composition>
 </h:body>

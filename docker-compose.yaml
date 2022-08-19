@@ -1,14 +1,21 @@
-version: '3.7'
+version: '3.1'
 
 services:
-
-  mongo:
-    image: mongo
-    ports:
-      - 27017:27017
-
-  mongo-express:
-    image: mongo-express
+  my-workout:
+    image: mysql
     restart: always
     ports:
-      - 8081:8081
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: my-workout
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - '8081:80'
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=my-workout
+

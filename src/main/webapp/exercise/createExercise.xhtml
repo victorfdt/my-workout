@@ -12,6 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
 >
 
 <!--xmlns:p="http://primefaces.org/ui"-->
@@ -25,7 +26,18 @@
         <ui:define name="title">Create Exercise</ui:define>
         <ui:define name="content">
             <h:form>
-                <h:commandButton actionListener="#{exerciseBean.create()}" value="Create"/>
+                <div class="card">
+                    <h5>Create Exercise</h5>
+                    <div class="field grid">
+                        <p:outputLabel for="exerciseName" styleClass="col-fixed" style="width:100px" value="Name"/>
+                        <div class="col">
+                            <p:inputText id="exerciseName" value="#{exerciseDTO.name}"/>
+                        </div>
+                    </div>
+                    <div class="field grid">
+                        <p:commandButton actionListener="#{exerciseController.create(exerciseDTO)}"/>
+                    </div>
+                </div>
             </h:form>
         </ui:define>
     </ui:composition>

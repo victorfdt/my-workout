@@ -1,20 +1,24 @@
 package com.elros.myworkout.service;
 
+import com.elros.myworkout.config.MyWorkoutEntityManagerFactory;
 import com.elros.myworkout.entity.Exercise;
-import jakarta.nosql.mapping.document.DocumentTemplate;
-import org.eclipse.microprofile.config.inject.ConfigProperty;
-
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.transaction.Transactional;
 
 @ApplicationScoped
+@Transactional
 public class ExerciseService {
 
-    @Inject
-    @ConfigProperty(name = "db1")
-    private DocumentTemplate template;
+    private final EntityManagerFactory entityManagerFactory = MyWorkoutEntityManagerFactory.getFactory();
 
     public Exercise insert(final Exercise exercise) {
-        return template.insert(exercise);
+        final EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        em.persist(exercise);
+        em.getTransaction().commit();
+        em.close();
+        return exercise;
     }
 }

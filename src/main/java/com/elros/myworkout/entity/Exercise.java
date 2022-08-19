@@ -1,21 +1,23 @@
 package com.elros.myworkout.entity;
 
-import jakarta.nosql.mapping.Column;
-import jakarta.nosql.mapping.Entity;
-import jakarta.nosql.mapping.Id;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.io.Serializable;
+
 
 @Entity
+@Table(name = "exercise")
 @Getter
 @Setter
-@Builder
 @EqualsAndHashCode
-public class Exercise {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class Exercise implements Serializable {
 
     @Id
+    @GeneratedValue
     private long id;
 
     @Column
@@ -23,4 +25,9 @@ public class Exercise {
 
     @Column
     private ExerciseType type;
+
+    public Exercise(final String name, final ExerciseType type) {
+        this.name = name;
+        this.type = type;
+    }
 }
