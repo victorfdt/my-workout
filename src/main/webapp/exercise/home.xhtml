@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: victo
+  Date: 19-Aug-22
+  Time: 5:19 PM
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+>
+
+<h:head>
+    <title>Title</title>
+</h:head>
+
+<h:body>
+    <ui:composition template="/layout/common/commonLayout.xhtml">
+        <ui:define name="title">Exercises</ui:define>
+        <ui:define name="content">
+            <div class="card">
+                <h2>Exercise</h2>
+                <h:form>
+                    <div class="card">
+                        <p:dataTable var="exercise" value="#{exerciseController.exercises}">
+                            <p:column headerText="Name">
+                                <h:outputText value="#{exercise.name}"/>
+                            </p:column>
+                        </p:dataTable>
+                    </div>
+                </h:form>
+            </div>
+
+            <div class="card">
+                <p:button value="Create" outcome="/exercise/create.xhtml"/>
+            </div>
+
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+</html>

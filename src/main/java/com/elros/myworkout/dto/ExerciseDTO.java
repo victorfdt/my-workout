@@ -4,13 +4,13 @@ import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
 import lombok.*;
 
-@Getter
-@Setter
 @RequestScoped
 @Named
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class ExerciseDTO {
     private String name;
 }

@@ -4,21 +4,39 @@ import com.elros.myworkout.config.MyWorkoutEntityManagerFactory;
 import com.elros.myworkout.entity.Exercise;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.EntityManagerFactory;
-import jakarta.transaction.Transactional;
+
+import java.util.List;
 
 @ApplicationScoped
-@Transactional
 public class ExerciseService {
 
-    private final EntityManagerFactory entityManagerFactory = MyWorkoutEntityManagerFactory.getFactory();
+    private EntityManager em = MyWorkoutEntityManagerFactory.getFactory().createEntityManager();
 
     public Exercise insert(final Exercise exercise) {
-        final EntityManager em = entityManagerFactory.createEntityManager();
-        em.getTransaction().begin();
+        begin();
         em.persist(exercise);
+        commitClose();
+        return exercise;
+    }
+
+    private void begin() {
+        em = MyWorkoutEntityManagerFactory.getFactory().createEntityManager();
+        em.getTransaction().begin();
+    }
+
+    private void commitClose() {
         em.getTransaction().commit();
         em.close();
-        return exercise;
+    }
+
+    public List<Exercise> getAll() {
+        begin();
+        final List<Exercise> exercises = em.createQuery("SELECT e From Exercise e", Exercise.class).getResultList();
+        close();
+        return exercises;
+    }
+
+    private void close() {
+        em.close();
     }
 }

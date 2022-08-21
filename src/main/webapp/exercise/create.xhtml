@@ -15,7 +15,6 @@
       xmlns:p="http://primefaces.org/ui"
 >
 
-<!--xmlns:p="http://primefaces.org/ui"-->
 
 <h:head>
     <title>Create Exercise</title>
@@ -27,15 +26,15 @@
         <ui:define name="content">
             <h:form>
                 <div class="card">
-                    <h5>Create Exercise</h5>
-                    <div class="field grid">
-                        <p:outputLabel for="exerciseName" styleClass="col-fixed" style="width:100px" value="Name"/>
-                        <div class="col">
-                            <p:inputText id="exerciseName" value="#{exerciseDTO.name}"/>
+                    <h2>Create Exercise2</h2>
+                    <div class="ui-fluid">
+                        <div class="field grid">
+                            <p:outputLabel for="exerciseName" styleClass="col-12 md:col-2" value="Name"/>
+                            <div class="col-12 md:col-10">
+                                <p:inputText id="exerciseName" value="#{exerciseController.exerciseDTO.name}"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="field grid">
-                        <p:commandButton actionListener="#{exerciseController.create(exerciseDTO)}"/>
+                        <p:commandButton value="Create" action="#{exerciseController.create()}"/>
                     </div>
                 </div>
             </h:form>

@@ -18,27 +18,33 @@
     <title><ui:insert name="title">My Workout</ui:insert></title>
     <!--    <h:outputStylesheet name="common-style.css" library="css"/>-->
 </h:head>
-
 <h:body>
-    <div id="page">
-        <div id="header">
-            <ui:insert name="header">
-                <ui:include src="/layout/common/commonHeader.xhtml"/>
-            </ui:insert>
+    <div class="card">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <ui:insert name="header">
+                            <ui:include src="/layout/common/commonHeader.xhtml"/>
+                        </ui:insert>
+                    </div>
+                </div>
+                <div class="ui-g">
+                    <div class="ui-g-12">
+                        <ui:insert name="content">
+                            <ui:include src="/layout/common/commonContent.xhtml"/>
+                        </ui:insert>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-g text-center">
+                <div class="ui-g-12">
+                    <ui:insert name="footer">
+                        <ui:include src="/layout/common/commonFooter.xhtml"/>
+                    </ui:insert>
+                </div>
+            </div>
         </div>
-
-        <div id="content">
-            <ui:insert name="content">
-                <ui:include src="/layout/common/commonContent.xhtml"/>
-            </ui:insert>
-        </div>
-
-        <div id="footer">
-            <ui:insert name="footer">
-                <ui:include src="/layout/common/commonFooter.xhtml"/>
-            </ui:insert>
-        </div>
-
     </div>
 </h:body>
 
