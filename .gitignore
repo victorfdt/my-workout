@@ -8,6 +8,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -37,5 +38,7 @@ build/
 ### Mac OS ###
 .DS_Store
 
-### Sonarlint
-.idea/
+### Build ###
+index.pb
+my_workout_war_exploded.xml
+dataSources.xml
