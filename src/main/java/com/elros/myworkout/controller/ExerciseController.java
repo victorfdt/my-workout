@@ -10,7 +10,6 @@ import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
 import java.util.List;
 
 
@@ -18,7 +17,7 @@ import java.util.List;
 @Named
 @RequestScoped
 @ManagedBean
-public class ExerciseController implements Serializable {
+public class ExerciseController {
 
     @Inject
     ExerciseService exerciseService;
@@ -34,5 +33,10 @@ public class ExerciseController implements Serializable {
 
     public List<ExerciseDTO> getExercises() {
         return EntityDTOMapper.getExerciseDTOList(exerciseService.getAll());
+    }
+
+    public String delete(final Long id) {
+        exerciseService.delete(id);
+        return "/exercise/home.xhtml?faces-redirect=true";
     }
 }

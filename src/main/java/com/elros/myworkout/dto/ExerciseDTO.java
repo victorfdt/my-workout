@@ -12,5 +12,6 @@ import lombok.*;
 @Getter
 @Setter
 public class ExerciseDTO {
+    private Long id;
     private String name;
 }

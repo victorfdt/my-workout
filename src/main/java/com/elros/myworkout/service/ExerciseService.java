@@ -23,4 +23,10 @@ public class ExerciseService extends EntityManagerUtil {
         close();
         return exercises;
     }
+
+    public void delete(final Long id) {
+        begin();
+        em.createQuery("DELETE FROM Exercise e WHERE e.id = " + id).executeUpdate();
+        commitClose();
+    }
 }

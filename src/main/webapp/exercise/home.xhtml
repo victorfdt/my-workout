@@ -31,6 +31,15 @@
                             <p:column headerText="Name">
                                 <h:outputText value="#{exercise.name}"/>
                             </p:column>
+                            <p:column headerText="Edit">
+                                <p:commandButton type="button" value="Edit"
+                                                 styleClass="rounded-button ui-button-warning"/>
+                            </p:column>
+                            <p:column headerText="Delete">
+                                <p:commandButton action="#{exerciseController.delete(exercise.id)}"
+                                                 value="Delete"
+                                                 styleClass="rounded-button ui-button-danger"/>
+                            </p:column>
                         </p:dataTable>
                     </div>
                 </h:form>
